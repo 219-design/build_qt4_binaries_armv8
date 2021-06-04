@@ -1,0 +1,14 @@
+prefix=/opt/legacy_qt/armv8_rpi
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtSql
+qt_config=lex yacc warn_on uic resources qt warn_on release link_prl no_mocdepend release stl qt_no_framework cross_compile release shared dll embedded largefile stl precompile_header exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc explicitlib moc thread shared dll
+moc_location=/opt/legacy_qt/armv8_rpi/bin/moc
+uic_location=/opt/legacy_qt/armv8_rpi/bin/uic
+
+Name: Qtsql
+Description: Qtsql Library
+Version: 4.4.3
+Libs: -L${libdir} -lQtSql -L/opt/legacy_qt/armv8_rpi/lib  -lQtCore -L/opt/legacy_qt/armv8_rpi/lib -lm -lrt -lpthread -ldl  
+Cflags: -DQT_SHARED -I/opt/legacy_qt/armv8_rpi/include -I${includedir}
+
